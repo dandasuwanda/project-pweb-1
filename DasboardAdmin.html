@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Mewah</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+        }
+        .navbar {
+            background-color: #2c3e50;
+        }
+        .navbar a {
+            font-weight: 600;
+        }
+        .hero {
+            background: linear-gradient(145deg, #1e3c72, #2a5298);
+            color: white;
+            padding: 10vh 0;
+            text-align: center;
+        }
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
+        }
+        .hero p {
+            font-size: 1.2rem;
+        }
+        .card {
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        .card:hover {
+            transform: scale(1.05);
+        }
+        .card img {
+            width: 100%;
+            height: auto;
+            border-bottom: 3px solid #f39c12;
+        }
+        .card-body {
+            background-color: #ffffff;
+            padding: 30px;
+            text-align: center;
+        }
+        .card-title {
+            font-weight: bold;
+            color: #2c3e50;
+        }
+        .card-text {
+            font-size: 1rem;
+            color: #7f8c8d;
+        }
+        .btn-primary {
+            background-color: #f39c12;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 50px;
+            transition: all 0.3s ease-in-out;
+        }
+        .btn-primary:hover {
+            background-color: #e67e22;
+            transform: scale(1.05);
+        }
+        .bg-light {
+            background-color: #ecf0f1 !important;
+        }
+        .facility-icon {
+            font-size: 3rem;
+            color: #f39c12;
+        }
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .form-label {
+            font-weight: 600;
+        }
+        .form-control, .form-select {
+            border-radius: 10px;
+        }
+        #formDataDisplay {
+            margin-top: 20px;
+            background-color: #ecf0f1;
+            padding: 20px;
+            border-radius: 10px;
+            display: none;
+        }
+        #formDataDisplay h4 {
+            margin-bottom: 15px;
+        }
+        /* Responsiveness for small devices */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            .hero p {
+                font-size: 1rem;
+            }
+            .card {
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">DANDA HOTEL</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#rooms">Kamar</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#facilities">Fasilitas</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#booking">Pemesanan</a></li>
+              
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="container">
+            <h1>Selamat Datang di Hotel Santuy Stay</h1>
+            <p>Pengalaman menginap yang luar biasa, nyaman, dan mewah.</p>
+        </div>
+    </header>
+
+    <!-- Rooms Section -->
+    <section id="rooms" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Pilihan Kamar</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="https://th.bing.com/th?id=OIP.-nK2l9B6zUPa0zHLkKht5QHaFE&w=302&h=206&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=1" alt="Kamar 1">  
+                        <div class="card-body">
+                            <h5 class="card-title">Kamar Standar</h5>
+                            <p class="card-text">Kenyamanan terjangkau dengan fasilitas lengkap.</p>
+                            <p><strong>Harga: Rp1.500.000/malam</strong></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="https://th.bing.com/th?id=OIP.vacvl-ueEoLCEPjJ3od1kAHaE8&w=306&h=204&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2" alt="Kamar 2">
+                        <div class="card-body">
+                            <h5 class="card-title">Kamar Deluxe</h5>
+                            <p class="card-text">Kamar luas dengan fasilitas premium.</p>
+                            <p><strong>Harga: Rp2.500.000/malam</strong></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="https://th.bing.com/th?id=OIP.at1USObRYopFZNS4M0e_MwHaE7&w=306&h=204&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2" alt="Kamar 3">
+                        <div class="card-body">
+                            <h5 class="card-title">Suite Keluarga</h5>
+                            <p class="card-text">Cocok untuk keluarga dengan ruang yang luas.</p>
+                            <p><strong>Harga: Rp3.500.000/malam</strong></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Facilities Section -->
+    <section id="facilities" class="bg-light py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Fasilitas Kami</h2>
+            <div class="row">
+                <div class="col-md-4 text-center">
+                    <i class="facility-icon bi bi-spa"></i>
+                    <h5>Spa & Kebugaran</h5>
+                    <p>Relaksasi dan pemulihan dengan layanan spa kami.</p>
+                </div>
+                <div class="col-md-4 text-center">
+                    <i class="facility-icon bi bi-pool"></i>
+                    <h5>Kolam Renang</h5>
+                    <p>Rasakan kesegaran dengan berenang di kolam mewah kami.</p>
+                </div>
+                <div class="col-md-4 text-center">
+                    <i class="facility-icon bi bi-basket"></i>
+                    <h5>Restoran Mewah</h5>
+                    <p>Nikmati hidangan gourmet yang dibuat oleh koki terbaik.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Section -->
+    <section id="booking" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Pesan Kamar</h2>
+            <form id="bookingForm" class="row g-3">
+                <div class="col-md-6">
+                    <label for="name" class="form-label">Nama</label>
+                    <input type="text" class="form-control" id="name" required>
+                </div>
+                <div class="col-md-6">
+                    <label for="gender" class="form-label">Jenis Kelamin</label>
+                    <select class="form-select" id="gender" required>
+                        <option value="">Pilih...</option>
+                        <option value="Male">Laki-Laki</option>
+                        <option value="Female">Perempuan</option>
+                    </select>
+                </div>
+                <div class="col-md-6">
+                    <label for="idNumber" class="form-label">Nomor Identitas</label>
+                    <input type="text" class="form-control" id="idNumber" maxlength="16" required>
+                </div>
+                <div class="col-md-6">
+                    <label for="roomType" class="form-label">Tipe Kamar</label>
+                    <select class="form-select" id="roomType" required>
+                        <option value="">Pilih...</option>
+                        <option value="Standard">Standar</option>
+                        <option value="Deluxe">Deluxe</option>
+                        <option value="Family">Keluarga</option>
+                    </select>
+                </div>
+                <div class="col-md-6">
+                    <label for="checkInDate" class="form-label">Tanggal Check-In</label>
+                    <input type="date" class="form-control" id="checkInDate" required>
+                </div>
+                <div class="col-md-6">
+                    <label for="duration" class="form-label">Durasi (malam)</label>
+                    <input type="number" class="form-control" id="duration" required>
+                </div>
+                <div class="col-md-12">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="breakfast">
+                        <label class="form-check-label" for="breakfast">
+                            Termasuk Sarapan (+Rp80.000)
+                        </label>
+                    </div>
+                </div>
+                <div class="col-md-12 text-center">
+                    <button type="submit" class="btn btn-primary">Pesan</button>
+                </div>
+            </form>
+
+            <!-- Display Form Data -->
+            <div id="formDataDisplay">
+                <h4>Detail Pemesanan</h4>
+                <p><strong>Nama: </strong><span id="displayName"></span></p>
+                <p><strong>Jenis Kelamin: </strong><span id="displayGender"></span></p>
+                <p><strong>Nomor Identitas: </strong><span id="displayIdNumber"></span></p>
+                <p><strong>Tipe Kamar: </strong><span id="displayRoomType"></span></p>
+                <p><strong>Tanggal Check-In: </strong><span id="displayCheckInDate"></span></p>
+                <p><strong>Durasi: </strong><span id="displayDuration"></span></p>
+                <p><strong>Sarapan: </strong><span id="displayBreakfast"></span></p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-dark text-white text-center py-3">
+        <p>&copy;DANDA HOTEL</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.getElementById('bookingForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            // Get form data
+            const name = document.getElementById('name').value;
+            const gender = document.getElementById('gender').value;
+            const idNumber = document.getElementById('idNumber').value;
+            const roomType = document.getElementById('roomType').value;
+            const checkInDate = document.getElementById('checkInDate').value;
+            const duration = document.getElementById('duration').value;
+            const breakfast = document.getElementById('breakfast').checked ? 'Termasuk' : 'Tidak Termasuk';
+
+            // Display data in the form below
+            document.getElementById('displayName').innerText = name;
+            document.getElementById('displayGender').innerText = gender;
+            document.getElementById('displayIdNumber').innerText = idNumber;
+            document.getElementById('displayRoomType').innerText = roomType;
+            document.getElementById('displayCheckInDate').innerText = checkInDate;
+            document.getElementById('displayDuration').innerText = duration;
+            document.getElementById('displayBreakfast').innerText = breakfast;
+
+            // Show the displayed data
+            document.getElementById('formDataDisplay').style.display = 'block';
+        });
+    </script>
+</body>
+</html>
